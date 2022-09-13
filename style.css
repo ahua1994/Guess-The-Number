@@ -1,0 +1,134 @@
+body { 
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height:100%; 
+}
+
+p {
+    box-shadow: 0 0 10px;
+    font-size: 2rem;
+    padding: 4px; 
+    border: 3px solid white;
+    border-radius: 5px; 
+    transform: translate(0, 45px); 
+    position: absolute;
+    visibility: hidden; 
+} 
+
+.title {
+    margin-bottom: 8rem;
+}
+
+.invalid, .too-low, .too-high  { 
+    visibility: visible;
+    animation: 2s reveal linear;
+}
+
+.congrats, .gameover {
+    position: absolute;
+    text-align: center;
+    transform: translate(0, -80px);
+    visibility: hidden;
+}
+
+.newgame{
+    padding: 10px;
+    visibility: visible; 
+}
+
+.spin-top, .spin-bottom{
+    display: flex; 
+    justify-content: center;
+}
+
+img {
+    height: 35%; 
+    animation: 2s illuminate infinite alternate ease-in-out;
+}
+
+.rotate {
+    animation: 4s spin infinite forwards ease-in-out;
+}
+
+.spin { 
+    height: 300px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+} 
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translate(-50px, 45px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(0, 45px); 
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes illuminate {
+    0% { 
+        opacity: 1;  
+    }
+    100% { 
+        opacity: 0.1; 
+    }
+}
+
+@keyframes spin {
+    0% {
+        color: lightgreen;
+        transform: rotate(0deg);
+    }
+
+    50%{
+        color: red;
+        transform:  rotate(180deg);
+    }
+
+    100% {
+        color: lightgreen;
+        transform: rotate(360deg);
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 { 
+    text-shadow:0 0 3px white;
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input[type='text']{
+    width: 18rem;
+    font-size: 2rem;
+} 
+
+button[type='submit'] { 
+    background-color: black;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px;
+    height: 2.6rem;
+    width: 6rem;
+    font-size: 1.5rem;
+    transform: translate(15px, -2px);
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="spin-top">
+        <div class="spin">
+        </div>
+        <div class="spin">
+            <h1 class="rotate">?</h1>
+        </div>
+        <div class="spin">
+            <p class="newgame">New Game</p>
+        </div>
+    </div>
+    <main>
+        <h1 class="gameover">Game Over!<br> The Number was <span class="shownum">number</span> !</h1>
+        <h1 class="congrats">Congratulations! You guessed the number in
+            <span class="result">1 guess</span> !
+        </h1>
+        <h1 class="title">Guess The Number <span class="lower-range">1</span> -
+            <span class="upper-range">100</span> !
+        </h1>
+        <p class="invalid">Please Enter a Valid Number</p>
+        <p class="too-low">Too Low! <span class="guesses">5</span> remaining</p>
+        <p class="too-high">Too High! <span class="guesses">5</span> remaining</p>
+        <form action="">
+            <input id="guess" type="text" placeholder="Enter Your Guess ">
+            <button id="submit" type="submit">Submit</button>
+            <!-- add reset button -->
+        </form>
+    </main>
+
+
+    <div class="spin-bottom">
+        <div class="spin">
+            <h1 class="rotate">?</h1>
+        </div>
+        <div class="spin">
+            <img src="./bulb.png" alt="bulb">
+        </div>
+        <div class="spin">
+            <h1 class="rotate">?</h1>
+        </div>
+    </div>
+
+    <script src="./guess.js"></script>
+</body>
+
+</html>
