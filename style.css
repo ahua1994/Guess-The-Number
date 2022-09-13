@@ -132,3 +132,36 @@ button[type='submit'] {
     font-size: 1.5rem;
     transform: translate(15px, -2px);
 }
+
+@media screen and (max-width: 480px) {
+    button[type='submit']{
+        transform: translate(0, 40px);
+    }
+    p {
+        transform: translate(0, 120px);
+    }
+    .invalid, .too-low, .too-high  { 
+        visibility: visible;
+        animation: 2s reveal linear;
+    } 
+    @keyframes reveal {
+        0% {
+            opacity: 0;
+            transform: translate(-50px, 120px);
+        }
+    
+        50% {
+            opacity: 1;
+            transform: translate(0, 120px); 
+        }
+    
+        100% {
+            opacity: 0;
+        }
+    }
+    .newgame{
+        transform: translate(40px, -10px);
+        padding: 10px;
+        visibility: visible; 
+    }
+}
