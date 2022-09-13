@@ -36,6 +36,7 @@ function checkGuess() {
     if (guesses <= 1) {
         submit.disabled = true;
         title.style.visibility = "hidden";
+        input.value = "";
         showNum.textContent = `${num}`;
         gameover.style.visibility = "visible";
         document.body.style.backgroundColor = "rgb(80, 0, 0)";
@@ -48,7 +49,7 @@ function checkGuess() {
     if (guess < num) {
         guesses--;
         userGuesses[0].textContent =
-            guesses > 5 ? `${guesses} guess` : `${guesses} guesses`;
+            guesses == 1 ? `${guesses} guess` : `${guesses} guesses`;
         rangeLow.textContent =
             parseInt(rangeLow.textContent) < guess
                 ? guess
@@ -57,7 +58,7 @@ function checkGuess() {
     } else if (guess > num) {
         guesses--;
         userGuesses[1].textContent =
-            guesses > 5 ? `${guesses} guess` : `${guesses} guesses`;
+            guesses == 1 ? `${guesses} guess` : `${guesses} guesses`;
         rangeHigh.textContent =
             parseInt(rangeHigh.textContent) > guess
                 ? guess
