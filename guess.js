@@ -22,8 +22,7 @@ invalid.classList.toggle("invalid");
 newgame.classList.toggle("newgame");
 
 let guesses = 5;
-let num = randomNum();
-console.log(num);
+let num = randomNum(); 
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
