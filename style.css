@@ -103,6 +103,10 @@ img {
     }
 }
 
+body {
+    min-width: 400px;
+}
+
 main{
     display: flex;
     flex-direction: column;
