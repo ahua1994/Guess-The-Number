@@ -23,7 +23,6 @@ newgame.classList.toggle("newgame");
 
 let guesses = 5;
 let num = randomNum();
-console.log(num);
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
@@ -33,7 +32,8 @@ submit.addEventListener("click", (e) => {
 newgame.addEventListener("click", newGame);
 
 function checkGuess() {
-    if (guesses < 1) {
+    let guess = parseInt(input.value);
+    if (guesses <= 1 && guess != num) {
         submit.disabled = true;
         title.style.visibility = "hidden";
         input.value = "";
@@ -42,7 +42,6 @@ function checkGuess() {
         document.body.style.backgroundColor = "rgb(80, 0, 0)";
         return newgame.classList.toggle("newgame");
     }
-    let guess = parseInt(input.value);
     if (isNaN(parseInt(guess))) {
         reveal(invalid);
     }
@@ -104,5 +103,4 @@ function newGame() {
     input.value = "";
     guesses = 5;
     num = randomNum();
-    console.log(num);
 }

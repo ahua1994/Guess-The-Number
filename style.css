@@ -35,7 +35,8 @@ p {
 
 .newgame{
     padding: 10px;
-    visibility: visible; 
+    visibility: visible;
+    background-color: black; 
 }
 
 .spin-top, .spin-bottom{
