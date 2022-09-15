@@ -22,7 +22,8 @@ invalid.classList.toggle("invalid");
 newgame.classList.toggle("newgame");
 
 let guesses = 5;
-let num = randomNum(); 
+let num = randomNum();
+console.log(num);
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
@@ -32,7 +33,7 @@ submit.addEventListener("click", (e) => {
 newgame.addEventListener("click", newGame);
 
 function checkGuess() {
-    if (guesses <= 1) {
+    if (guesses < 1) {
         submit.disabled = true;
         title.style.visibility = "hidden";
         input.value = "";
@@ -103,4 +104,5 @@ function newGame() {
     input.value = "";
     guesses = 5;
     num = randomNum();
+    console.log(num);
 }

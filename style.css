@@ -134,11 +134,19 @@ button[type='submit'] {
 }
 
 @media screen and (max-width: 600px) {
-    button[type='submit']{
-        transform: translate(0, 40px);
+
+    main {
+        margin-left: 1.5rem;
     }
+    h1{
+        font-size: 3rem;
+    }
+    input[type='text']{
+        font-size:1.5rem;
+        width: 12rem;
+    } 
     p {
-        transform: translate(0, 160px);
+        transform: translate(0, 40px);
     }
     .invalid, .too-low, .too-high  { 
         visibility: visible;
@@ -147,12 +155,12 @@ button[type='submit'] {
     @keyframes reveal {
         0% {
             opacity: 0;
-            transform: translate(-50px, 160px);
+            transform: translate(-50px, 40px);
         }
     
         50% {
             opacity: 1;
-            transform: translate(0, 160px); 
+            transform: translate(0, 40px); 
         }
     
         100% {
